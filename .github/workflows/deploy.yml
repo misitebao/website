@@ -12,7 +12,7 @@ jobs:
       - name: Checkout | 切换到部署分支
         uses: actions/checkout@v2
         with:
-          ref: hugo_pages
+          ref: main
           submodules: true
           fetch-depth: 0
       - name: Setup Hugo | 设置Hugo环境
