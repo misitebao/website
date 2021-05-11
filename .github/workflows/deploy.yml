@@ -1,7 +1,7 @@
 name: Deploy | 部署
 on:
   push:
-    branches: [hugo_pages]
+    branches: [main]
 #  pull_request:
 #    branches: [master]
 jobs:
