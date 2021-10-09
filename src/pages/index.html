@@ -11,20 +11,22 @@
     <meta name="description" content="米司特包的个人主页" />
     <meta name="author" content="Misitebao,i@misitebao.com" />
     <meta name="copyright" content="Misitebao" />
+    <!-- 默认加载资源 -->
     <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
-    <!-- <script src="https://unpkg.com/vue@next/dist/vue.global.js"></script> -->
+    <!-- 引入包含模板编译器的vue库 -->
+    <% if(process.env.NODE_ENV === 'development'){ %>
+    <script src="https://unpkg.com/vue@next/dist/vue.global.js"></script>
+    <% } else { %>
     <script src="https://unpkg.com/vue@next/dist/vue.global.prod.js"></script>
-    <title>
-      <%= htmlWebpackPlugin.options.title %> - Misitebao
-    </title>
+    <% } %>
+    <!-- 网页标题 -->
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!-- 打包生成资源 -->
   </head>
 
   <body>
     <noscript>
-      <strong
-        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please
-        enable it to continue.</strong
-      >
+      <div><strong>很抱歉，如果没有启用 JavaScript，页面将无法正常工作。</strong></div>
     </noscript>
     <div id="app">
       <!-- Header -->
