@@ -1,4 +1,4 @@
-name: Deploy | 部署
+name: Build and Deploy | 构建并部署
 on:
   push:
     branches: [main]
@@ -6,6 +6,7 @@ on:
     branches: [main]
 jobs:
   build-and-deploy:
+    name: Build and Deploy | 构建并部署
     runs-on: ubuntu-latest
     if: github.repository == 'misitebao/website'
     steps:
@@ -16,15 +17,21 @@ jobs:
           submodules: true
           fetch-depth: 0
 
+      - name: Setup Hugo | 设置Hugo环境
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.100.0"
+          extended: false
+
       - name: Build Site | 构建网站
         run: |
-          npm install && npm run build
+          hugo --gc
 
       - name: Deploy to Server | 部署到服务器
         uses: hengkx/ssh-deploy@v1.0.1
         with:
           HOST: ${{ secrets.DEPLOY_HOST }}
-          USERNAME: ${{ secrets.DEPLOY_HOST_USER }} # 为了用户信息安全对敏感数据可以在secrets中配置请看下图
+          USERNAME: ${{ secrets.DEPLOY_HOST_USER }}
           PASSWORD: ${{ secrets.DEPLOY_HOST_PASSWORD }}
-          SOURCE: "dist"
+          SOURCE: "public"
           TARGET: "${{ secrets.TARGET }}"
