@@ -1,0 +1,38 @@
+baseURL = '/'
+languageCode = 'en'
+defaultContentLanguage = "en"
+title = 'Misitebao'
+
+theme = "hugo-theme-misipage"
+
+hasCJKLanguage = true
+
+[params]
+
+# 多语言配置
+[languages]
+
+  [languages.en]
+  languageCode = "en"
+  languageName = "English"
+  contentDir = "content/en"
+  title = 'Misitebao'
+  weight = 1
+
+    [languages.en.author]
+    name = "Misitebao"
+    email = "i@misitebao.com"
+    website = "https://misitebao.com/en"
+
+[languages.zh-Hans]
+
+languageCode = "zh-Hans"
+languageName = "简体中文"
+contentDir = "content/zh-Hans"
+title = '米司特包'
+weight = 2
+
+  [languages.zh-Hans.author]
+  name = "米司特包"
+  email = "i@misitebao.com"
+  website = "https://misitebao.com"
