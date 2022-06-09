@@ -2,8 +2,8 @@ name: Build and Deploy | 构建并部署
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
+  # pull_request:
+  #   branches: [main]
 jobs:
   build-and-deploy:
     name: Build and Deploy | 构建并部署
