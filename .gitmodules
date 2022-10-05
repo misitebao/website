@@ -1,0 +1,4 @@
+[submodule "themes/hugo-theme-misipage"]
+	path = themes/hugo-theme-misipage
+	url = https://github.com/misitebao/hugo-theme-misipage.git
+	branch = main
