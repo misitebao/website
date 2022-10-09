@@ -1,5 +1,5 @@
 ---
-title: "Misitebao - Technology serves evolution rather than control"
+title: "Misite Bao - Technology serves evolution rather than control"
 ---
 
 # Misite Bao
