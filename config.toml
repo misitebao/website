@@ -1,16 +1,35 @@
 baseURL = '/'
-defaultContentLanguage = "zh-hans"
+defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
 theme = "hugo-theme-misipage"
 
-[params]
+[params.comment]
+enable = true
+[params.comment.giscus]
+async = ""
+category = "Comments"
+categoryID = "DIC_kwDOENCxP84CSOFB"
+crossOrigin = "anonymous"
+emitMetadata = "0"
+enable = true
+inputPosition = "bottom"
+# lang = "" # 设置 "auto" 跟随站点
+mapping = "og:title" 
+reactionsEnabled = "1" 
+repo = "misitebao/misitebao" 
+repoID = "MDEwOlJlcG9zaXRvcnkyODIxMTIzMTk=" 
+strict = "0" 
+theme = "" # 设置 "auto" 跟随站点
 
 # 多语言配置
 [languages]
 
 [languages.en]
 contentDir = "content/en"
+copyright = '''
+@Copyright 2022 Misite Bao
+'''
 hasCJKLanguage = true
 languageCode = "en"
 languageName = "English"
@@ -22,9 +41,45 @@ email = "i@misitebao.com"
 name = "Misite Bao"
 website = "https://misitebao.com/en"
 
+[[languages.en.menus.header]]
+identifier = 'home'
+name = 'Home'
+# parent = '' # 父菜单标识
+url = '/'
+weight = 1
+
+[[languages.en.menus.header]]
+identifier = 'projects'
+name = 'Projects'
+# parent = '' # 父菜单标识
+url = '/projects/'
+weight = 2
+
+[[languages.en.menus.header]]
+identifier = 'sponsors'
+name = 'Sponsors'
+# parent = '' # 父菜单标识
+url = '/sponsors/'
+weight = 3
+
+# [[languages.en.menus.header]]
+# identifier = 'about'
+# name = 'About'
+# # parent = '' # 父菜单标识
+# url = '/about/'
+# weight = 4
+
+[languages.en.params]
+description = 'Speaker, Open Source Contributor. Technology serves evolution rather than control.'
+images = ['http://github.com/misitebao.png']
+title = 'Misite Bao'
+
 [languages.zh-Hans]
 
 contentDir = "content/zh-Hans"
+copyright = '''
+@Copyright 2022 米司特包 | <a href="https://beian.miit.gov.cn/#/Integrated/recordQuery" title="备案" >鄂ICP备20006255号</a >
+'''
 hasCJKLanguage = true
 languageCode = "zh-Hans"
 languageName = "简体中文"
@@ -35,3 +90,36 @@ weight = 2
 email = "i@misitebao.com"
 name = "米司特包"
 website = "https://misitebao.com/"
+
+[[languages.zh-Hans.menus.header]]
+identifier = 'home'
+name = '主页'
+# parent = '' # 父菜单标识
+url = '/'
+weight = 1
+
+[[languages.zh-Hans.menus.header]]
+identifier = 'projects'
+name = '项目'
+# parent = '' # 父菜单标识
+url = '/projects/'
+weight = 2
+
+[[languages.zh-Hans.menus.header]]
+identifier = 'sponsors'
+name = '赞助'
+# parent = '' # 父菜单标识
+url = '/sponsors/'
+weight = 3
+
+# [[languages.zh-Hans.menus.header]]
+# identifier = 'about'
+# name = '关于'
+# # parent = '' # 父菜单标识
+# url = '/about/'
+# weight = 4
+
+[languages.zh-Hans.params]
+description = '演讲者，开源贡献者。 技术服务于进化而非控制。'
+images = ['http://github.com/misitebao.png']
+title = '米司特包'
