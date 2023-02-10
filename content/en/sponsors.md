@@ -8,4 +8,5 @@ layout: "sponsors"
 
 # Sponsors
 
-If you also enjoy my works, you can sponsor me keep them sustainable and get early access to new projects.
+If you also enjoy my works, you can sponsor me keep them sustainable and get
+early access to new projects.
